@@ -3,8 +3,37 @@ variable "management_group_id" {
   description = "scope at which to apply the policy"
 }
 
-variable "policy_definitions" {
-  type        = map
-  description = "hcl templated policy definitions output from policy-factory"
-  default = {}
+variable "name" {
+  type        = string
+  description = "scope at which to apply the policy"
+}
+
+variable "mode" {
+  type        = string
+  description = "scope at which to apply the policy"
+}
+
+variable "display_name" {
+  type        = string
+  description = "scope at which to apply the policy"
+}
+
+variable "description" {
+  type        = string
+  description = "scope at which to apply the policy"
+}
+
+variable "policy_rule" {
+  type        = string
+  description = "scope at which to apply the policy"
+}
+
+variable "metadata" {
+  type        = string
+  description = "scope at which to apply the policy"
+}
+
+variable "parameters" {
+  type        = string
+  description = "scope at which to apply the policy"
 }
