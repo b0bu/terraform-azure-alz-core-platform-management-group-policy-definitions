@@ -1,25 +1,4 @@
 locals {
-  // the value assigned to the tf output
-  // can this be simplified, i.e. no specific requires_id or
-  // output = azurerm_policy_set_definition.policy
-
-  // source of truth for which policy requires an identity and which role should be assigned to that identity
-  azurerm_role_assignments = {
-    "Security Admin" = ["Deploy-MDFC-Config"],
-    "Contributor" = ["Deploy-MDFC-Config"],
-    "Log Analytics Contributor" = [],
-    "Monitoring Contributor" = [],
-    "Virtual Machine Contributor" = []
-  }
-
-  # output = {
-  #   requires_identity = {
-  #       for policy in local.set_definition_ids : 
-  #         policy.name => policy.id
-  #   }
-  #   no_required_identity = {}
-  # }
-
   templated_policy_definitions = var.policy_definitions
 
   set_definition_ids = azurerm_policy_definition.policy
